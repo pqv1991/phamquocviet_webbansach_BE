@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 public class Notification {
     private String message;

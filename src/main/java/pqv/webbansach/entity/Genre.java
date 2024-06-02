@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,7 +11,7 @@ public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_genre")
-    private int idGenre; // mã thể loại
+    private int idGenre;
     @Column(name = "name_genre")
     private String nameGenre; // tên thể loại
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})

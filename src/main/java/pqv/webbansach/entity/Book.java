@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,13 +17,13 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_book")
-    private int idBook; //Mã sách
+    private int idBook;
     @Column(name = "name_book")
-    private String nameBook; // tên sách
+    private String nameBook;
     @Column(name = "author")
-    private String author; // tên tác giả
+    private String author;
     @Column (name = "description", columnDefinition = "LONGTEXT")
-    private String description; // mô tả
+    private String description;
     @Column(name = "list_price")
     private double listPrice; // giá niêm yết
     @Column(name = "sell_price")
@@ -35,7 +35,7 @@ public class Book {
     @Column(name = "sold_quantity")
     private  int soldQuantity; // số lượng bán
     @Column(name = "discount_percent")
-    private  int discountPercent; // phần trăm giảm giá
+    private  int discountPercent;
     @ManyToMany(fetch = FetchType.LAZY ,cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
     @JoinTable(name = "book_genre", joinColumns = @JoinColumn(name = "id_book"),inverseJoinColumns = @JoinColumn(name = "id_genre"))
     private List<Genre> listGenres; // danh sách thể loại
@@ -50,25 +50,5 @@ public class Book {
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<CartItem> listCartItems; // danh sách giỏ hàng
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "idBook=" + idBook +
-                ", nameBook='" + nameBook + '\'' +
-                ", author='" + author + '\'' +
-                ", description='" + description + '\'' +
-                ", listPrice=" + listPrice +
-                ", sellPrice=" + sellPrice +
-                ", quatity=" + quantity +
-                ", avrRating=" + avgRating +
-                ", soldQuantity=" + soldQuantity +
-                ", discountPercent=" + discountPercent +
-                ", listGenres=" + listGenres +
-                ", listImages=" + listImages +
-                ", listReviews=" + listReviews +
-                ", listOrderDetails=" + listOrderDetails +
-                ", listFavoriteBooks=" + listFavoriteBooks +
-                ", listCartItems=" + listCartItems +
-                '}';
-    }
+
 }

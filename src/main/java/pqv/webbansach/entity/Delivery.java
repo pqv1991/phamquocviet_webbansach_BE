@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,9 +11,9 @@ public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_delivery")
-    private int idDelivery; // mã giao hàng
+    private int idDelivery;
     @Column(name = "name_delivery")
-    private String nameDelivery; // tên hình thức giao hàng
+    private String nameDelivery;
     @Column(name = "description")
     private String description;// mô tả
     @Column(name = "fee_delivery")

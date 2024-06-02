@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -20,13 +20,5 @@ public class CartItem {
     @JoinColumn(name = "id_user",nullable = false)
     private User user;
 
-    @Override
-    public String toString() {
-        return "CartItem{" +
-                "idCart=" + idCart +
-                ", quantity=" + quantity +
-                ", book=" + book +
-                ", user=" + user +
-                '}';
-    }
+
 }

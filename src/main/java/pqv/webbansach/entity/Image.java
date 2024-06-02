@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -24,15 +24,5 @@ public class Image {
     @JoinColumn(name = "id_book", nullable = false)
     private Book book; // hình của quyển sách nào;
 
-    @Override
-    public String toString() {
-        return "Image{" +
-                "idImage=" + idImage +
-                ", nameImage='" + nameImage + '\'' +
-                ", isThumbnail=" + isThumbnail +
-                ", urlImage='" + urlImage + '\'' +
-                ", dataImage='" + dataImage + '\'' +
-                ", book=" + book +
-                '}';
-    }
+
 }

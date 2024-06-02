@@ -1,4 +1,4 @@
-package vietpq.webbansach.entity;
+package pqv.webbansach.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ public class Feedbacks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_feedback")
-    private int idFeedback; // mã đánh giá
+    private int idFeedback;
     @Column(name = "title")
     private String title;
     @Column(name = "comment")
